@@ -1,8 +1,5 @@
-import { Button } from "@/components/ui/button";
-import React from "react";
+import { AuthScreen } from "@/features/auth/components/auth-screen";
 
-function page() {
-  return <Button variant="slack">Click me</Button>;
+export default function Home() {
+  return <AuthScreen />;
 }
-
-export default page;
