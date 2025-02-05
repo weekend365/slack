@@ -4,7 +4,7 @@ import { ConvexClientProvider } from "@/components/convex-client-provider";
 import "./globals.css";
 import { Modals } from "@/components/modals";
 import { Toaster } from "sonner";
-import { JotaiProvider } from "@/components/ui/jotai-provider";
+import { JotaiProvider } from "@/components/jotai-provider";
 
 export default function RootLayout({
   children,
