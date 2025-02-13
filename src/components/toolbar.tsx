@@ -9,7 +9,7 @@ interface ToolbarProps {
   handleEdit: () => void;
   handleThread: () => void;
   handleDelete: () => void;
-  handleReation: (value: string) => void;
+  handleReaction: (value: string) => void;
   hideThreadButton?: boolean;
 }
 
@@ -17,7 +17,7 @@ export const Toolbar = ({
   isAuthor,
   isPending,
   handleEdit,
-  handleReation,
+  handleReaction,
   handleThread,
   handleDelete,
   hideThreadButton,
