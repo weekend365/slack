@@ -5,6 +5,7 @@ import "./globals.css";
 import { Modals } from "@/components/modals";
 import { Toaster } from "sonner";
 import { JotaiProvider } from "@/components/jotai-provider";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 export default function RootLayout({
   children,
@@ -17,9 +18,11 @@ export default function RootLayout({
         <body>
           <ConvexClientProvider>
             <JotaiProvider>
-              <Toaster />
-              <Modals />
-              {children}
+              <NuqsAdapter>
+                <Toaster />
+                <Modals />
+                {children}
+              </NuqsAdapter>
             </JotaiProvider>
           </ConvexClientProvider>
         </body>
