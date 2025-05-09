@@ -131,7 +131,7 @@ export const Thread = ({ messageId, onClose }: ThreadProps) => {
   if (loadingMessage || status === "LoadingFirstPage") {
     return (
       <div className="h-full flex flex-col">
-        <div className="flex justify-between items-center px- h-[49px]4 border-b">
+        <div className="h-[49px] flex justify-between items-center px-4 border-b">
           <p className="text-lg font-bold">Thread</p>
           <Button onClick={onClose} size="iconSm" variant="ghost">
             <XIcon className="size-5 stroke-[1.5]" />
@@ -147,7 +147,7 @@ export const Thread = ({ messageId, onClose }: ThreadProps) => {
   if (!message) {
     return (
       <div className="h-full flex flex-col">
-        <div className="flex justify-between items-center px- h-[49px]4 border-b">
+        <div className="h-[49px] flex justify-between items-center px-4 border-b">
           <p className="text-lg font-bold">Thread</p>
           <Button onClick={onClose} size="iconSm" variant="ghost">
             <XIcon className="size-5 stroke-[1.5]" />
