@@ -67,7 +67,7 @@ export const Profile = ({ memberId, onClose }: ProfileProps) => {
     if (!ok) return;
 
     removeMember(
-      { id: memberId },
+      { id: memberId, role: "admin" },
       {
         onSuccess: () => {
           toast.success("Member removed");
@@ -86,7 +86,7 @@ export const Profile = ({ memberId, onClose }: ProfileProps) => {
     if (!ok) return;
 
     removeMember(
-      { id: memberId },
+      { id: memberId, role: "admin" },
       {
         onSuccess: () => {
           router.replace("/");
