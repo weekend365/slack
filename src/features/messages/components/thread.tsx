@@ -36,6 +36,7 @@ type CreateMessageValues = {
   parentMessageId: Id<"messages">;
   body: string;
   image: Id<"_storage"> | undefined;
+  workspaceId: Id<"workspaces">;
 };
 
 export const Thread = ({ messageId, onClose }: ThreadProps) => {
