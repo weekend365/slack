@@ -4,7 +4,7 @@ import { AlertTriangle, Loader, XIcon } from "lucide-react";
 import { useGetMessage } from "@/features/messages/api/use-get-message";
 import { Message } from "@/components/message";
 import { useWorkspaceId } from "@/hooks/use-workspace-id";
-import { UseCurrentMember } from "@/features/members/api/use-current-member";
+import { useCurrentMember } from "@/features/members/api/use-current-member";
 import { useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Quill from "quill";
@@ -48,7 +48,7 @@ export const Thread = ({ messageId, onClose }: ThreadProps) => {
 
   const editorRef = useRef<Quill | null>(null);
 
-  const { data: currentMember } = UseCurrentMember({ workspaceId });
+  const { data: currentMember } = useCurrentMember({ workspaceId });
   const { data: message, isLoading: loadingMessage } = useGetMessage({
     id: messageId,
   });

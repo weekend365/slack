@@ -1,4 +1,4 @@
-import { UseCurrentMember } from "@/features/members/api/use-current-member";
+import { useCurrentMember } from "@/features/members/api/use-current-member";
 import { useGetWorkspace } from "@/features/workspaces/api/use-get-workspace";
 import { useWorkspaceId } from "@/hooks/use-workspace-id";
 import {
@@ -25,7 +25,7 @@ export const WorkspaceSidebar = () => {
 
   const [_open, setOpen] = useCreateChannelModal();
 
-  const { data: member, isLoading: memberLoading } = UseCurrentMember({
+  const { data: member, isLoading: memberLoading } = useCurrentMember({
     workspaceId,
   });
   const { data: workspace, isLoading: workspaceLoading } = useGetWorkspace({

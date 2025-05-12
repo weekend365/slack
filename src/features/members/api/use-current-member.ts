@@ -2,11 +2,11 @@ import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import { Id } from "../../../../convex/_generated/dataModel";
 
-interface UseCurrentMemberProps {
+interface useCurrentMemberProps {
   workspaceId: Id<"workspaces">;
 }
 
-export const UseCurrentMember = ({ workspaceId }: UseCurrentMemberProps) => {
+export const useCurrentMember = ({ workspaceId }: useCurrentMemberProps) => {
   const data = useQuery(api.members.current, { workspaceId });
   const isLoading = data === undefined;
 

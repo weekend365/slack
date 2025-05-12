@@ -2,7 +2,7 @@
 
 import { useGetChannels } from "@/features/channels/api/use-get-channels";
 import { useCreateChannelModal } from "@/features/channels/store/use-create-channel-modal";
-import { UseCurrentMember } from "@/features/members/api/use-current-member";
+import { useCurrentMember } from "@/features/members/api/use-current-member";
 import { useGetWorkspace } from "@/features/workspaces/api/use-get-workspace";
 import { useWorkspaceId } from "@/hooks/use-workspace-id";
 import { Loader, TriangleAlert } from "lucide-react";
@@ -14,7 +14,7 @@ const WorkspaceIdPage = () => {
   const workspaceId = useWorkspaceId();
   const [open, setOpen] = useCreateChannelModal();
 
-  const { data: member, isLoading: memberLoading } = UseCurrentMember({
+  const { data: member, isLoading: memberLoading } = useCurrentMember({
     workspaceId,
   });
   const { data: workspace, isLoading: workspaceLoading } = useGetWorkspace({

@@ -6,7 +6,7 @@ import { ChannelHero } from "./channel-hero";
 import { useState } from "react";
 import { Id } from "../../convex/_generated/dataModel";
 import { useWorkspaceId } from "@/hooks/use-workspace-id";
-import { UseCurrentMember } from "@/features/members/api/use-current-member";
+import { useCurrentMember } from "@/features/members/api/use-current-member";
 import { Loader } from "lucide-react";
 import { ConversationHero } from "./conversation-hero";
 
@@ -46,7 +46,7 @@ export const MessageList = ({
 
   const workspaceId = useWorkspaceId();
 
-  const { data: currentMember } = UseCurrentMember({ workspaceId });
+  const { data: currentMember } = useCurrentMember({ workspaceId });
 
   const groupedMessages = data?.reduce(
     (groups, message) => {
