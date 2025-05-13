@@ -167,15 +167,15 @@ export const Profile = ({ memberId, onClose }: ProfileProps) => {
           </Button>
         </div>
         <div className="flex flex-col items-center justify-center p-4">
-          <Avatar className="max-w-[256px] max-h-[256px] size-full">
+          <Avatar className="size-14">
             <AvatarImage src={member.user.image} />
             <AvatarFallback className="aspect-square text-6xl">
               {avatarFallback}
             </AvatarFallback>
           </Avatar>
         </div>
-        <div className="flex flex-col p-4">
-          <p className="text-xl font-bold">{member.user.name}</p>
+        <div className="flex flex-col p-4 pt-0">
+          <p className="text-xl font-bold text-center">{member.user.name}</p>
           {currentMember?.role === "admin" &&
           currentMember?._id !== memberId ? (
             <div className="flex items-center gap-2 mt-4">
